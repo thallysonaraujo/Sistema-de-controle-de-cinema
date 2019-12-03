@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="501.0" prefWidth="998.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="cinema4.FXMLIngressoController">
+    <children>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <RadioButton layoutX="14.0" layoutY="402.0" mnemonicParsing="false" selected="true" text="Inteira">
+         <toggleGroup>
+            <ToggleGroup fx:id="grupo" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton layoutX="14.0" layoutY="430.0" mnemonicParsing="false" text="Meia" toggleGroup="$grupo" />
+      <RadioButton layoutX="14.0" layoutY="459.0" mnemonicParsing="false" text="Não Pagante" toggleGroup="$grupo" />
+      <Text layoutX="14.0" layoutY="389.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tipo de Ingresso:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="18.0" layoutY="255.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seções:" wrappingWidth="55.00002545118332">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <RadioButton layoutX="16.0" layoutY="271.0" mnemonicParsing="false" selected="true" text="18:00h">
+         <toggleGroup>
+            <ToggleGroup fx:id="horarios" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton layoutX="16.0" layoutY="302.0" mnemonicParsing="false" text="20:00h" toggleGroup="$horarios" />
+      <RadioButton layoutX="16.0" layoutY="335.0" mnemonicParsing="false" text="22:00h" toggleGroup="$horarios" />
+      <Text layoutX="83.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cine Secreto">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="29.0" />
+         </font>
+      </Text>
+      <ImageView fx:id="icone" fitHeight="75.0" fitWidth="69.0" layoutX="4.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagens/icone.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="395.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="COMPRA DE INGRESSO">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="419.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ESCOLHA UM FILME" />
+      <ImageView fx:id="coringa" fitHeight="131.0" fitWidth="98.0" layoutX="220.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagens/coringa.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="estrelas" fitHeight="118.0" fitWidth="98.0" layoutX="429.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagens/estrelas.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="vingadores" fitHeight="133.0" fitWidth="90.0" layoutX="635.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagens/vingadores.jpg" />
+         </image>
+      </ImageView>
+      <RadioButton layoutX="232.0" layoutY="251.0" mnemonicParsing="false" selected="true" text="CORINGA">
+         <toggleGroup>
+            <ToggleGroup fx:id="Filmes" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton layoutX="393.0" layoutY="251.0" mnemonicParsing="false" text="ESTRELAS ALÉM DO TEMPO" toggleGroup="$Filmes" />
+      <RadioButton layoutX="633.0" layoutY="251.0" mnemonicParsing="false" text="VINGADORES" toggleGroup="$Filmes" />
+      <MenuButton layoutX="226.0" layoutY="307.0" mnemonicParsing="false" onAction="#salas" text="SALAS">
+        <items>
+          <MenuItem mnemonicParsing="false" text="Action 1" />
+          <MenuItem mnemonicParsing="false" text="Action 2" />
+        </items>
+      </MenuButton>
+      <MenuButton layoutX="217.0" layoutY="381.0" mnemonicParsing="false" onAction="#poltronasLivres" text="ESCOLHA UMA POLTRONA">
+        <items>
+          <MenuItem mnemonicParsing="false" text="Action 1" />
+          <MenuItem mnemonicParsing="false" text="Action 2" />
+        </items>
+      </MenuButton>
+      <Text layoutX="527.0" layoutY="324.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text layoutX="498.0" layoutY="324.0" strokeType="OUTSIDE" strokeWidth="0.0" text="POLTRONAS LIVRES">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="776.0" layoutY="317.0" strokeType="OUTSIDE" strokeWidth="0.0" text="VALOR FINAL" wrappingWidth="98.00000009313226">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Button layoutX="725.0" layoutY="398.0" mnemonicParsing="false" onAction="#valorTotal" text="CONFIRMAR" />
+      <Button layoutX="833.0" layoutY="398.0" mnemonicParsing="false" onAction="#cancelarSair" prefHeight="25.0" prefWidth="84.0" text="CANCELAR" />
+    </children>
+</AnchorPane>
